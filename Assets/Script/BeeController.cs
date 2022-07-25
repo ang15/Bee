@@ -6,35 +6,49 @@ using UnityEngine.UI;
 public class BeeController : MonoBehaviour
 {
     [SerializeField]
-    private Collor material;
-    private float score;
+    private ChangeBee skins;
+    private int points;
     [SerializeField]
-    private Text scoreText;
+    private Text PointsText;
     [SerializeField]
-    private GameObject thisPole;
+    private GameObject Pole;
 
     void Update()
     { 
-        scoreText.text = "" + score;
+        PointsText.text = "" + points;
+        Save();
+        IsCollor();
+    }
+
+     private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "flower")
+        {
+            collision.gameObject.SetActive(false);
+            UpdateScore();
+        }
+    }
+    public void IsCollor()
+    {
+        GetComponent<Image>().sprite = skins.bee[skins.beechange];
+    }
+    private void UpdateScore()
+    {
+        points++;
+
+    }
+    public void Save()
+    {
         if (PlayerPrefs.HasKey("Monets"))
         {
 
-            material.beechange = PlayerPrefs.GetInt("Monets");
+            skins.beechange = PlayerPrefs.GetInt("Monets");
 
         }
         else
         {
-            material.beechange = 0;
+            skins.beechange = 0;
         }
-        GetComponent<Image>().sprite = material.bee[material.beechange];
     }
 
-        private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "flower")
-        {
-            score++;
-            collision.gameObject.SetActive(false);
-        }
-    }
 }

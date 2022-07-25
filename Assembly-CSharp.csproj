@@ -61,7 +61,6 @@
     <Compile Include="Assets\Script\Panel.cs" />
     <Compile Include="Assets\Script\Pole.cs" />
     <Compile Include="Assets\Script\BeeController.cs" />
-    <Compile Include="Assets\Script\Collor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

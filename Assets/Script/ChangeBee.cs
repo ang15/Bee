@@ -5,36 +5,46 @@ using UnityEngine.UI;
 
 public class ChangeBee : MonoBehaviour
 {
-    [SerializeField]
-    private Collor material;
-    public void left()
+    public Sprite[] bee = new Sprite[5];
+    public int beechange = 0;
+  
+    public void Left()
     {
-        if (material.beechange == 4)
-        {
-
-          PlayerPrefs.SetInt("matirial",0);
-
-            material.beechange = 0;
-        }
-        else
-        {
-            material.beechange++;
-        PlayerPrefs.SetInt("matirial", 0);
-        }
-        GetComponent<Image>().sprite = material.bee[material.beechange];
+        UpdateLeft();
     }
     public void Right()
     {
-        if (material.beechange == 0)
+        UpdateRight();
+    }
+        
+    private void UpdateLeft()
+    {
+        if (beechange == 4)
         {
-            material.beechange = 4;
+
+            beechange = 0;
         }
         else
         {
-            material.beechange--;
+            beechange++;
         }
-        GetComponent<Image>().sprite = material.bee[material.beechange];
-    }
 
-  
+        isSkin();
+    }
+    private void UpdateRight()
+    {
+        if (beechange == 0)
+        {
+
+            beechange = 4;
+        }
+        else
+        {
+            beechange--;
+        }
+        isSkin();
+    }
+    private void isSkin() { 
+        GetComponent<Image>().sprite = bee[beechange];
+    }
 }

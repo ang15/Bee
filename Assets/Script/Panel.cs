@@ -5,22 +5,35 @@ using UnityEngine;
 public class Panel : MonoBehaviour
 {
     [SerializeField]
-    private Transform car;
+    private Transform bee;
 
     public void Move()
     {
         StartCoroutine(OnMove());
     }
+   
+    private void OnMoveLeft()
+    {
+        Vector3 pozition = bee.localPosition;
+         pozition.x -= 10;
+            bee.localPosition = pozition;
+        
+    } 
+    private void OnMoveRight()
+    {
+        Vector3 pozition = bee.localPosition;
+            pozition.x += 10;
+            bee.localPosition = pozition;
+        
+
+    }
     IEnumerator OnMove()
     {
-        Vector3 pozition = car.localPosition;
-        if (car.position.x > Camera.main.ScreenToWorldPoint(Input.mousePosition).x)
+        if (bee.position.x > Camera.main.ScreenToWorldPoint(Input.mousePosition).x)
         {
             for(int i = 0; i < 21; i++) 
-            { 
-                yield return new WaitForSeconds(0.2f*Time.deltaTime);
-                pozition.x -= 10;
-                car.localPosition = pozition;
+            {
+                OnMoveLeft();
             }
         }
         else 
@@ -28,8 +41,7 @@ public class Panel : MonoBehaviour
             for (int i = 0; i < 21; i++)
             {
                 yield return new WaitForSeconds(0.2f*Time.deltaTime);
-                pozition.x += 10;
-                car.localPosition = pozition;
+                OnMoveRight();
             }
 
         }

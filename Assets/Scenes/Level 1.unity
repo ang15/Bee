@@ -273,15 +273,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 46826707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebff5c5ff90b55049b1a7eebe688f264, type: 3}
+  m_Script: {fileID: 11500000, guid: dfaf92721cebe9440b1213f27b236b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bee:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: fd0fcdbc45a842b42b0bf994e4f2bee7, type: 3}
+  - {fileID: 21300000, guid: fd0fcdbc45a842b42b0bf994e4f2bee7, type: 3}
+  - {fileID: 21300000, guid: fd0fcdbc45a842b42b0bf994e4f2bee7, type: 3}
+  - {fileID: 21300000, guid: fd0fcdbc45a842b42b0bf994e4f2bee7, type: 3}
+  - {fileID: 21300000, guid: fd0fcdbc45a842b42b0bf994e4f2bee7, type: 3}
   beechange: 0
 --- !u!4 &46826709
 Transform:
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd29eee1b2b40247a63589446792d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: 0
+  clin: 0
   flowers:
   - {fileID: 31879387}
   - {fileID: 422675617}
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42dcf82f70d55024995badc1f7d331a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 1745112236}
+  bee: {fileID: 1745112236}
 --- !u!114 &465584148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2054,9 +2054,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3780521a9496c14493332f1403ff675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 46826708}
-  scoreText: {fileID: 116267523}
-  thisPole: {fileID: 1223599289}
+  skins: {fileID: 46826708}
+  PointsText: {fileID: 116267523}
+  Pole: {fileID: 1223599289}
 --- !u!1 &1775728460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2854,7 +2854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.0158997, y: -0.00012207031}
+  m_AnchoredPosition: {x: -1.0158691, y: -0.00012207031}
   m_SizeDelta: {x: 114.42, y: 184.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2037898743
@@ -2952,7 +2952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd29eee1b2b40247a63589446792d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: 0
+  clin: 0
   flowers:
   - {fileID: 1949908433}
   - {fileID: 1868442104}

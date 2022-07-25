@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 46826709}
   - component: {fileID: 46826708}
   m_Layer: 0
-  m_Name: Material
+  m_Name: ChangeCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,16 +149,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 46826707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebff5c5ff90b55049b1a7eebe688f264, type: 3}
+  m_Script: {fileID: 11500000, guid: dfaf92721cebe9440b1213f27b236b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cars:
-  - {fileID: 21300000, guid: 2e2768cb4316241419adaacbf50cde9f, type: 3}
-  - {fileID: 21300000, guid: 770ccc369a4cc4143b89972086db9df6, type: 3}
-  - {fileID: 21300000, guid: 8b098e5bad1fc0045ae8f62fbc6e6606, type: 3}
-  - {fileID: 21300000, guid: bb1f7f49539686d49ae56d637b0d56b8, type: 3}
-  - {fileID: 21300000, guid: cbc60f7bdfc0781429b526d345f68ff4, type: 3}
-  carChange: 0
+  bee:
+  - {fileID: 21300000, guid: fd0fcdbc45a842b42b0bf994e4f2bee7, type: 3}
+  - {fileID: 21300000, guid: fd0fcdbc45a842b42b0bf994e4f2bee7, type: 3}
+  - {fileID: 21300000, guid: fd0fcdbc45a842b42b0bf994e4f2bee7, type: 3}
+  - {fileID: 21300000, guid: fd0fcdbc45a842b42b0bf994e4f2bee7, type: 3}
+  - {fileID: 21300000, guid: fd0fcdbc45a842b42b0bf994e4f2bee7, type: 3}
+  beechange: 0
 --- !u!4 &46826709
 Transform:
   m_ObjectHideFlags: 0
@@ -173,81 +173,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &53938779
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 53938780}
-  - component: {fileID: 53938782}
-  - component: {fileID: 53938781}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &53938780
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53938779}
-  m_LocalRotation: {x: 0.56715786, y: -0, z: -0, w: 0.8236092}
-  m_LocalPosition: {x: 0, y: 0, z: 238}
-  m_LocalScale: {x: 0.80586, y: 0.80586, z: 0.80586}
-  m_Children: []
-  m_Father: {fileID: 1167213714}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 69.105, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.41, y: -145.20995}
-  m_SizeDelta: {x: 513.2, y: 552.96}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &53938781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53938779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4b818244888bac04a9d0c2813af9ab91, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &53938782
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53938779}
-  m_CullTransparentMesh: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +267,6 @@ GameObject:
   - component: {fileID: 624543162}
   - component: {fileID: 624543164}
   - component: {fileID: 624543163}
-  - component: {fileID: 624543165}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -389,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2e2768cb4316241419adaacbf50cde9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd0fcdbc45a842b42b0bf994e4f2bee7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -407,19 +331,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624543161}
   m_CullTransparentMesh: 1
---- !u!114 &624543165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624543161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfaf92721cebe9440b1213f27b236b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 46826708}
 --- !u!1 &813581825
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +398,7 @@ RectTransform:
   m_LocalScale: {x: 1.2913661, y: 1.2913661, z: 1.2913661}
   m_Children: []
   m_Father: {fileID: 1167213714}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -538,10 +449,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1775728465}
+        m_TargetAssemblyTypeName: Menue, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -549,18 +460,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 813581825}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &907799062
 MonoBehaviour:
@@ -631,7 +530,7 @@ RectTransform:
   m_LocalScale: {x: 0.75586, y: 0.75586, z: 0.75586}
   m_Children: []
   m_Father: {fileID: 1167213714}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -682,9 +581,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624543165}
-        m_TargetAssemblyTypeName: Change, Assembly-CSharp
-        m_MethodName: left
+      - m_Target: {fileID: 46826708}
+        m_TargetAssemblyTypeName: ChangeBee, Assembly-CSharp
+        m_MethodName: Right
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -762,7 +661,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 624543162}
-  - {fileID: 53938780}
   - {fileID: 1372826962}
   - {fileID: 909528632}
   - {fileID: 907799060}
@@ -794,7 +692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6f3b86f528d503498d561119b2d6ebc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 707cc06266b3e614eacc8c904af3acef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -838,13 +736,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372826961}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75586, y: 0.75586, z: 0.75586}
   m_Children: []
   m_Father: {fileID: 1167213714}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -233.99, y: 189.48}
@@ -894,9 +792,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624543165}
-        m_TargetAssemblyTypeName: Change, Assembly-CSharp
-        m_MethodName: Right
+      - m_Target: {fileID: 46826708}
+        m_TargetAssemblyTypeName: ChangeBee, Assembly-CSharp
+        m_MethodName: Left
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -926,7 +824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6d7c23cb155784e43b41f8853b097e72, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4eef493dd3cd52c4da2c9789847688c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
