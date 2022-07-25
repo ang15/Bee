@@ -4,14 +4,30 @@ using UnityEngine;
 
 public class Pole : MonoBehaviour
 {
-    public bool move;
+    public bool clin;
     public GameObject[] flowers;
     void Start()
     {
-        move = true;
+        clin = true;
     }
 
     void Update()
+    {
+        Restart();
+        
+        if (clin == true)
+        {
+            clin = false;
+            StartCoroutine(Move());
+        }
+    }
+    IEnumerator Move()
+    {
+        yield return new WaitForSeconds(1.5f*Time.deltaTime);
+        transform.localPosition = new Vector2(transform.localPosition.x, transform.localPosition.y-10);
+        clin = true;
+    }
+    public void Restart()
     {
         if (transform.localPosition.y <= -1602)
         {
@@ -21,17 +37,6 @@ public class Pole : MonoBehaviour
                 flowers[i].gameObject.SetActive(true);
             }
         }
-        if (move == true)
-        {
-            move = false;
-            StartCoroutine(Move());
-        }
-    }
-    IEnumerator Move()
-    {
-        yield return new WaitForSeconds(1.5f*Time.deltaTime);
-        transform.localPosition = new Vector2(transform.localPosition.x, transform.localPosition.y-10);
-        move = true;
     }
 
 }
